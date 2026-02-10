@@ -1,0 +1,6 @@
+#env           = "staging"
+#aws_region    = "us-west-2"
+#cidr_block    = "10.1.0.0/16"
+#subnet_cidr   = "10.1.1.0/24"
+#instance_type = "t3.micro"
+#ami_id        = "ami-0c55b159cbfafe1f0"
