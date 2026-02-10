@@ -1,28 +1,28 @@
 module "vpc" {
   source     = "../../modules/vpc"
-  cidr_block = "10.0.0.0/16"
-  env        = "dev"
+  cidr_block = var.cidr_block
+  env        = var.env
 }
 
 module "subnet" {
   source      = "../../modules/subnet"
   vpc_id      = module.vpc.id
-  subnet_cidr = "10.0.1.0/24"
+  subnet_cidr = var.subnet_cidr
   az          = "us-east-1a"
-  env         = "dev"
+  env         = var.env
 }
 
 module "sg" {
   source = "../../modules/security-group"
   vpc_id = module.vpc.id
-  env    = "dev"
+  env    = var.env
 }
 
 module "ec2" {
   source         = "../../modules/ec2"
-  ami_id         = "ami-0c55b159cbfafe1f0" # Example Amazon Linux 2
-  instance_type  = "t2.micro"
+  ami_id         = var.ami_id # Example Amazon Linux 2
+  instance_type  = var.instance_type
   subnet_id      = module.subnet.id
   sg_id          = module.sg.id
-  env            = "dev"
+  env            = var.env
 }
