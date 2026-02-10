@@ -8,7 +8,7 @@ module "subnet" {
   source      = "./modules/subnet"
   vpc_id      = module.vpc.id
   subnet_cidr = var.subnet_cidr
-  az          = var.az
+  az          = data.aws_availability_zones.available.names[0]
   env         = var.env
 }
 
