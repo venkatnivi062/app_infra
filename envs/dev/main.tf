@@ -8,7 +8,7 @@ module "subnet" {
   source      = "../../modules/subnet"
   vpc_id      = module.vpc.id
   subnet_cidr = var.subnet_cidr
-  az          = "us-east-1a"
+  az          = "us-west-2b"
   env         = var.env
 }
 
