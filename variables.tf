@@ -31,8 +31,3 @@ variable "az" {
   description = "Availability Zone for subnet"
   type        = string
 }
-variable "bucket_name" {
-  description = "S3 bucket name"
-  type        = string
-}
- 
