@@ -12,7 +12,7 @@ on:
           - dev
           - staging
           - prod
-          - Qa
+          
 
 jobs:
   plan:
