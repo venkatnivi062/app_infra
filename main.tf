@@ -26,8 +26,3 @@ module "ec2" {
   sg_id          = module.sg.id
   env            = var.env
 }
-
-module "aws_s3_bucket" {
-  source      = "./modules/s3"
-  bucket_name = var.bucket_name
-}
