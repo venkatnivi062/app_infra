@@ -28,6 +28,6 @@ module "ec2" {
 }
 
 module "aws_s3_bucket" {
-  source      = "./modules/"
+  source      = "./modules/s3"
   bucket_name = var.bucket_name
 }
