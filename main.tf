@@ -27,11 +27,4 @@ module "ec2" {
   env            = var.env
 }
 
-module "ec2-test" {
-  source         = "./modules/ec2"
-  ami_id         = var.ami_id
-  instance_type  = var.instance_type
-  subnet_id      = module.subnet.id
-  sg_id          = module.sg.id
-  env            = var.env
-}
+
