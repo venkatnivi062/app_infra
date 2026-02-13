@@ -27,7 +27,7 @@ module "ec2" {
   env            = var.env
 }
 
-module "s3" {
-  source      = "./modules/s3"
+module "aws_s3_bucket" {
+  source      = "./modules/"
   bucket_name = var.bucket_name
 }
