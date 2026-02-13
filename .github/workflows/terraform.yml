@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: "Choose environment (dev, staging, prod,Qa)"
+        description: "Choose environment (dev, staging, prod,)"
         required: true
-        default: "Qa"
+        default: "dev"
         type: choice
         options:
           - dev
